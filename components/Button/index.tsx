@@ -10,12 +10,14 @@ interface ButtonProps
     > {
     children: React.ReactNode;
     color: "primary" | "ghost";
+    arrow?: "right" | "down";
 }
 
 export const Button: React.FC<ButtonProps> = ({
     children,
     color,
     className,
+    arrow,
     ...props
 }) => {
     return (
@@ -27,6 +29,15 @@ export const Button: React.FC<ButtonProps> = ({
             {...props}
         >
             {children}
+            {arrow && (
+                <span
+                    className={clsx(styles.arrow, {
+                        [styles.arrow_down]: arrow === "down",
+                    })}
+                >
+                    {">"}
+                </span>
+            )}
         </button>
     );
 };
