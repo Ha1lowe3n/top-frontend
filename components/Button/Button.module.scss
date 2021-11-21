@@ -1,0 +1,35 @@
+.button {
+    width: 148px;
+    height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s;
+
+    &_primary {
+        background-color: #7653fc;
+        border: 1px solid #ffffff;
+        line-height: 14px;
+        color: #ffffff;
+        padding: 10px;
+
+        &:hover {
+            background-color: #6c4de7;
+        }
+    }
+
+    &_ghost {
+        background-color: #ffffff;
+        border: 1px solid #ebebeb;
+        line-height: 19px;
+        color: #3b434e;
+        padding: 8px 13px;
+
+        &:hover {
+            background-color: #fafafa;
+        }
+    }
+}
