@@ -1,10 +1,21 @@
 import type { NextPage } from "next";
+import { useEffect, useState } from "react";
 import { Button } from "../components/Button";
 import { Htag } from "../components/Htag";
 import { Paragraph } from "../components/Paragraph";
+import { Rating } from "../components/Rating";
 import { Tag } from "../components/Tag";
 
 const Home: NextPage = () => {
+    const [counter, setCounter] = useState<number>(0);
+
+    useEffect(() => {
+        console.log(counter);
+        return () => {
+            console.log("unmount");
+        };
+    }, [counter]);
+
     return (
         <div>
             <Htag tag="h1">Текст</Htag>
@@ -24,6 +35,7 @@ const Home: NextPage = () => {
             <Tag color="red" href="#" size="big">
                 привет
             </Tag>
+            <Rating />
         </div>
     );
 };
