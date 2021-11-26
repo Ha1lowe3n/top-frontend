@@ -1,10 +1,12 @@
 import type { NextPage } from "next";
+import React from "react";
 import { useEffect, useState } from "react";
 import { Button } from "../components/Button";
 import { Htag } from "../components/Htag";
 import { Paragraph } from "../components/Paragraph";
 import { Rating } from "../components/Rating";
 import { Tag } from "../components/Tag";
+import { withLayout } from "../layouts/Layout";
 
 const Home: NextPage = () => {
     const [counter, setCounter] = useState<number>(0);
@@ -35,9 +37,9 @@ const Home: NextPage = () => {
             <Tag color="red" href="#" size="big">
                 привет
             </Tag>
-            <Rating />
+            <Rating isEditable />
         </div>
     );
 };
 
-export default Home;
+export default withLayout(Home);
