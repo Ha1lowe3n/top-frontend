@@ -1,14 +1,10 @@
 html,
 body {
-    margin: 0;
-    padding: 0;
-
     font-family: "Noto Sans KR", sans-serif;
 }
 
 a {
     text-decoration: none;
-
     color: inherit;
 }
 
@@ -16,4 +12,19 @@ a {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+:root {
+    --black: #3b434e;
+    --gray-light: #ebebeb;
+    --gray: #a4a4a4;
+    --gray-dark: #6c7077;
+    --white: white;
+    --primary: #7351f5;
+    --primary-hover: #6344df;
+    --red-light: #fea291;
+    --red: #fc836d;
+    --green: #007b48;
+    --green-light: #c8f8e4;
+    --font-family: "Noto Sans KR", sans-serif;
 }
