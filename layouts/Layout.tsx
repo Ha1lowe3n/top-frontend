@@ -6,6 +6,7 @@ import { LayoutProps } from './Layout.props';
 import { Header } from './Header/Header';
 import { Sidebar } from './Sidebar/Sidebar';
 import { Footer } from './Footer/Footer';
+import { AppContextProvider, IAppContext } from '../context/app.context';
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
 	return (
@@ -20,12 +21,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 	);
 };
 
-export const withLayout = <T extends Record<string, unknown>>(Component: React.FC<T>) => {
+export const withLayout = <T extends Record<string, unknown> & IAppContext>(
+	Component: React.FC<T>,
+) => {
 	return function withLayoutComponent(props: T) {
 		return (
-			<Layout>
-				<Component {...props} />
-			</Layout>
+			<AppContextProvider menu={props.menu} firstCategory={props.firstCategory}>
+				<Layout>
+					<Component {...props} />
+				</Layout>
+			</AppContextProvider>
 		);
 	};
 };
