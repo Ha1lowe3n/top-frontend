@@ -22,6 +22,7 @@ export const AppContextProvider = ({
 	const setMenu = (newMenu: MenuItem[]) => {
 		setMenuState(newMenu);
 	};
+	console.log(menu);
 
 	return (
 		<AppContext.Provider value={{ menu: menuState, firstCategory, setMenu }}>

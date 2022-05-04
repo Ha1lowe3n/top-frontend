@@ -6,7 +6,11 @@
 	font-weight: 500;
 	font-size: 18px;
 	line-height: 25px;
-	margin-top: 20px;
+	margin-bottom: 21px;
+
+	&Active {
+		margin-bottom: 14px;
+	}
 
 	&Active,
 	&:hover {
@@ -33,7 +37,6 @@
 }
 
 .secondBlock {
-	margin-top: 15px;
 	margin-left: 12px;
 	padding-left: 32px;
 

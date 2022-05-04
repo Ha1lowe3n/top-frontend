@@ -4,17 +4,10 @@ import clsx from 'clsx';
 import { useRouter } from 'next/router';
 
 import styles from './Menu.module.scss';
-import { BookIcon, BoxIcon, CloudIcon, HatIcon } from './icons';
 
 import { AppContext } from '../../context/app.context';
-import { FirstLevelMenuItem, PageItem, TopLevelCategory } from '../../interfaces';
-
-const firstLevelMenu: FirstLevelMenuItem[] = [
-	{ route: 'courses', name: 'Курсы', icon: <HatIcon />, id: TopLevelCategory.Courses },
-	{ route: 'services', name: 'Сервисы', icon: <CloudIcon />, id: TopLevelCategory.Services },
-	{ route: 'books', name: 'Книги', icon: <BookIcon />, id: TopLevelCategory.Books },
-	{ route: 'products', name: 'Продукты', icon: <BoxIcon />, id: TopLevelCategory.Products },
-];
+import { FirstLevelMenuItem, PageItem } from '../../interfaces';
+import { firstLevelMenu } from '../../helpers';
 
 export const Menu: React.FC = () => {
 	const { menu, setMenu, firstCategory } = useContext(AppContext);

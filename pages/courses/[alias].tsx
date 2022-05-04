@@ -9,7 +9,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { ParsedUrlQuery } from 'node:querystring';
 
-import { withLayout } from '../../layouts/Layout';
+import { withLayout } from '../../layout/Layout';
 import { MenuItem, TopPageModel, ProductModel } from '../../interfaces';
 
 const firstCategory = 0;

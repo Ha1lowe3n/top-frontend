@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 import { Button, Htag, Paragraph, Rating, Tag } from '../components';
 import { MenuItem } from '../interfaces/menu.interface';
-import { withLayout } from '../layouts/Layout';
+import { withLayout } from '../layout/Layout';
 
 const Home: NextPage<HomeProps> = ({ menu }) => {
 	const [rating, setRating] = useState<number>(4);

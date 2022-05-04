@@ -1,0 +1,12 @@
+.sidebar {
+	display: grid;
+	align-content: start;
+
+	.logo {
+		margin: 34px 0 20px;
+	}
+
+	.search {
+		margin-bottom: 30px;
+	}
+}
