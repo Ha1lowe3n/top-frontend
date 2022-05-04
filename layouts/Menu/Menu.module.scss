@@ -38,7 +38,14 @@
 	padding-left: 32px;
 
 	border-left: 1px solid #dfdfdf;
+}
 
+.secondLevelBlock {
+	display: none;
+
+	&Opened {
+		display: block;
+	}
 	&Opened:last-child {
 		margin-bottom: 20px;
 	}
